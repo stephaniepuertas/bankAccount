@@ -46,5 +46,6 @@ class BankAccount:
             self.balance+= self.balance *self.int_rate
 
 
-# sample user
+# sample bank acc
 bankaccount1=BankAccount(0,100)
+bankaccount1.display_account_info()
