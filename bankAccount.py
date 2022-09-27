@@ -39,10 +39,12 @@ class BankAccount:
             return True
 
     def display_account_info(self):
-        pass
-
-
+        print (self.balance)
 
     def yield_interest(self):
-        pass
+        if (self.balance) > 0: 
+            self.balance+= self.balance *self.int_rate
 
+
+# sample user
+bankaccount1=BankAccount(0,100)
