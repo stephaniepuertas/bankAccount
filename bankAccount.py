@@ -22,22 +22,30 @@ class BankAccount:
 
 
     def withdraw(self, amount):
-        if BankAccount.can_withdraw(self.balance,amount):
-            self.balance -= amount
+        if self.balance>=amount:
+            self.balance-=amount
+            return self
         else:
             self.balance-=5
             print("Insufficient Funds")
-        return self
+            return self
+
+    #     if BankAccount.can_withdraw(self.balance,amount):
+    #         self.balance -= amount
+    #     else:
+    #         self.balance-=5
+    #         print("Insufficient Funds")
+    #     return self
 
 
-    # static methods have no access to any attribute
-    # only to what is passed into it
-    @staticmethod
-    def can_withdraw(balance,amount):
-        if (balance - amount) < 0:
-            return False
-        else:
-            return True
+    # # static methods have no access to any attribute
+    # # only to what is passed into it
+    # @staticmethod
+    # def can_withdraw(balance,amount):
+    #     if (balance - amount) < 0:
+    #         return False
+    #     else:
+    #         return True
 
     def display_account_info(self):
         print (self.balance)
