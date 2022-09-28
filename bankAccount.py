@@ -41,6 +41,7 @@ class BankAccount:
 
     def display_account_info(self):
         print (self.balance)
+        return self
 
     def yield_interest(self):
         if (self.balance) > 0: 
@@ -57,20 +58,9 @@ class BankAccount:
 # create two accounts:
 #acc 1
 bankaccount1=BankAccount(.02,0)
-bankaccount1.deposit(50).display_account_info()
-bankaccount1.deposit(50).display_account_info()
-bankaccount1.deposit(5).display_account_info()
-bankaccount1.withdraw(5).yield_interest()
-bankaccount1.display_account_info()
-
+bankaccount1.deposit(50).deposit(50).deposit(5).withdraw(5).yield_interest().display_account_info()
 
 
 #acc2
 bankaccount2=BankAccount(.05,100)
-bankaccount2.deposit(100)
-bankaccount2.deposit(100).display_account_info()
-bankaccount2.withdraw(5)
-bankaccount2.withdraw(5)
-bankaccount2.withdraw(5)
-bankaccount2.withdraw(5).display_account_info()
-bankaccount2.yield_interest().display_account_info()
+bankaccount2.deposit(100).deposit(100).withdraw(5).withdraw(5).withdraw(5).withdraw(5).yield_interest().display_account_info()
